@@ -1,6 +1,6 @@
 const scene = document.getElementById("scene")
 const ctx = scene.getContext("2d")
-const position = {x:0,y:0} //object
+const position = {x:150,y:150} //object
 const keys = {
     left: {isPressed:false},
     right: {isPressed:false},
@@ -17,8 +17,15 @@ function draw (){
     requestAnimationFrame(draw)
     ctx.clearRect(0,0,scene.width,scene.height)
     move()
+    
+    ctx.lineWidth=10
+    ctx.strokeStyle="white"
+    ctx.beginPath()
     ctx.fillStyle="rgb(185,96,245)"
-    ctx.fillRect(position.x,position.y,size,size)
+    ctx.arc(position.x,position.y,size,0,2*Math.PI)
+    ctx.fill()
+    ctx.stroke()
+    
 }
 
 // setInterval(() => {
@@ -48,14 +55,14 @@ function move (){
     }
     if (keys.up.isPressed==true) {
         position.y-=speed1
-        if (position.y<0){
-             position.y=0
+        if (position.y-size<0){
+             position.y=size
         }
     }
     if (keys.left.isPressed==true) {
         position.x-=speed1
-        if (position.x<0){
-            position.x=0
+        if (position.x-size<0){
+            position.x=size
         }
     }
     if (keys.right.isPressed==true) {

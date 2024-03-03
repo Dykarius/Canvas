@@ -15,6 +15,10 @@
     width: 80%;
 }
 
+body{
+    background-color: rgb(43, 43, 43);
+}
+
 /* 
 For tag (balise) I don't need "." or "#"" 
 
