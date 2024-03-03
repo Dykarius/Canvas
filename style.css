@@ -1,0 +1,58 @@
+/* I can call ID directly by using "#"" / or I can call class with "." */
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    color: rgb(7, 7, 7);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#scene{
+    background-color: black;
+    width: 60%;
+}
+
+/* 
+For tag (balise) I don't need "." or "#"" 
+
+body{
+    overflow-y: hidden;
+}
+ */
+
+
+
+/* 
+#sithlord{
+    font-size: 18px;
+    transition: 0.8s;
+   
+ }
+
+ #sithlord:hover{
+    letter-spacing: 3px;
+    transition: 0.8s;
+ } */
+ 
+
+ 
+ /* Media query */
+
+
+@media (max-width: 500px) {
+    #scene{
+        width: 70%;
+    }
+ }
+
+
+@media (max-width: 300px) {
+    #scene{
+        width: 80%;
+    }
+ }
+
+
